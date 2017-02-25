@@ -89,7 +89,6 @@
             app.querySelector('.entry-content').innerHTML = post.content;
             app.querySelector('.entry-footer .author a').innerHTML = post.author;
             var time = app.querySelector('.entry-footer time');
-            console.log(post.date);
             var timestamp = new Date(post.date * 1000);
             time.innerHTML = timestamp.toDateString();
             time.setAttribute('datetime', timestamp.toISOString());
