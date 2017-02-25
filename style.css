@@ -18,6 +18,12 @@ body, html {
     width: 100%;
 }
 
+@media all and (min-width: 768px) {
+    .aside {
+        width: 180px;
+    }
+}
+
 .header .container {
     display: flex;
     justify-content: space-around;
@@ -27,8 +33,39 @@ body, html {
     max-width: 124px;
 }
 
+.gallery ul, .gallery li {
+    list-style: none;
+}
+
+.gallery ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery li {
+    width: calc(100% / 1);
+}
+
 @media all and (min-width: 768px) {
-    .aside {
-        width: 180px;
+    .gallery li {
+        width: calc(100% / 2);
     }
+}
+
+@media all and (min-width: 1024px) {
+    .gallery li {
+        width: calc(100% / 3);
+    }
+
+}
+
+@media all and (min-width: 1280px) {
+    .gallery li {
+        width: calc(100% / 4);
+    }
+}
+
+.gallery img {
+    max-width: 100%;
+    height: auto;
 }
