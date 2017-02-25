@@ -8,3 +8,18 @@ body, html {
     padding: 0;
     display: block;
 }
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.aside {
+    width: 100%;
+}
+
+@media all and (min-width: 768px) {
+    .aside {
+        width: 180px;
+    }
+}
