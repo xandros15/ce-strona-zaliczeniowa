@@ -5,20 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Firma Lork</title>
+    <link href="./style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
 <div class="wrapper">
     <header class="header site-header">
-        <h1>Strona firmy Lork</h1>
-        <div class="logo">
-            <a href="/">
-                <img alt="logo" src="{{logo}}">
-            </a>
+        <div class="container">
+            <h1>Strona firmy Lork</h1>
+            <div class="logo">
+                <a href="/">
+                    <img alt="logo" src="{{logo}}">
+                </a>
+            </div>
         </div>
     </header>
-    <main class="main">
-        <section class="content">
-            <article class="">
+    <main class="main site-main">
+        <section class="site-content">
+            <article class="site-article">
                 <header class="entry-header">
                     <h1>
                         {{entry title}}
@@ -28,7 +32,9 @@
                     {{entry content}}
                 </section>
                 <footer class="entry-footer">
-                    <address class="author">By <a rel="author" href="#">{{author}}</a></address> on<time datetime="{{time}}">{{time}}</time>
+                    <address class="author">By <a rel="author" href="#">{{author}}</a></address>
+                    on
+                    <time datetime="{{time}}">{{time}}</time>
                 </footer>
             </article>
         </section>
@@ -43,9 +49,11 @@
             </ul>
         </nav>
     </aside>
+    <footer class="footer site-footer">
+        <div class="container">
+            <p>{{footer}}</p>
+        </div>
+    </footer>
 </div>
-<footer class="footer site-footer">
-    <p>{{footer}}</p>
-</footer>
 </body>
 </html>
