@@ -95,5 +95,12 @@
         }
     }
 
+    function loadMainPage() {
+        data.nav.find(function (e) {
+            return e.name == 'home';
+        }).callback();
+    }
+
     createNavigation();
+    loadMainPage();
 })();
