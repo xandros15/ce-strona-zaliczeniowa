@@ -8,17 +8,27 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
-<div class="wrapper">
-    <header class="header site-header">
-        <div class="container">
-            <h1>Strona firmy Lork</h1>
-            <div class="logo" id="logo">
-                <a href="#">
-                    <img alt="logo" src="{{logo}}">
-                </a>
-            </div>
+<header class="header site-header">
+    <div class="container">
+        <h1>Strona firmy Lork</h1>
+        <div class="logo" id="logo">
+            <a href="#">
+                <img alt="logo" src="{{logo}}">
+            </a>
         </div>
-    </header>
+    </div>
+</header>
+<div class="wrapper">
+    <aside class="aside site-aside">
+        <nav class="main-nav" id="nav">
+            <ul class="nav">
+                <li><a href="#">{{page}}</a></li>
+                <li><a href="#">{{page}}</a></li>
+                <li><a href="#">{{page}}</a></li>
+                <li><a href="#">{{page}}</a></li>
+            </ul>
+        </nav>
+    </aside>
     <main class="main site-main">
         <section class="site-content">
             <article class="site-article" id="app">
@@ -38,94 +48,84 @@
             </article>
         </section>
     </main>
-    <aside class="aside site-aside">
-        <nav class="main-nav" id="nav">
-            <ul class="nav">
-                <li><a href="#">{{page}}</a></li>
-                <li><a href="#">{{page}}</a></li>
-                <li><a href="#">{{page}}</a></li>
-                <li><a href="#">{{page}}</a></li>
-            </ul>
-        </nav>
-    </aside>
-    <footer class="footer site-footer" id="footer">
-        <div class="container">
-            <p>{{footer}}</p>
-        </div>
-    </footer>
-    <script type="text/html" id="gallery-template">
-        <section class="gallery">
-            <ul>
-                <li>
-                    <figure>
-                        <img src="http://thecatapi.com/api/images/get.php?id=98o">
-                        <figcaption>
-                            <h2>Kot numer #1</h2>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="http://thecatapi.com/api/images/get.php?id=7nt">
-                        <figcaption>
-                            <h2>Kot numer #2</h2>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="http://thecatapi.com/api/images/get.php?id=9o6">
-                        <figcaption>
-                            <h2>Kot numer #3</h2>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="http://thecatapi.com/api/images/get.php?id=b9o">
-                        <figcaption>
-                            <h2>Kot numer #4</h2>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="http://thecatapi.com/api/images/get.php?id=70q">
-                        <figcaption>
-                            <h2>Kot numer #5</h2>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="http://thecatapi.com/api/images/get.php?id=asa">
-                        <figcaption>
-                            <h2>Kot numer #6</h2>
-                        </figcaption>
-                    </figure>
-                </li>
-            </ul>
-        </section>
-    </script>
-    <script type="text/html" id="form-template">
-        <form method="POST" action="http://httpbin.org/post">
-            <div>
-                <label for="form-name">Imie</label>
-                <input aria-required="true" id="form-name" name="name" type="text" required>
-            </div>
-            <div>
-                <label for="form-email">Email</label>
-                <input aria-required="true" id="form-email" name="email" type="email" required>
-            </div>
-            <div>
-                <label for="form-content">Treść</label>
-                <textarea id="form-content" aria-required="true" name="content" required></textarea>
-            </div>
-            <div class="g-recaptcha" data-sitekey="6LfZ9gYTAAAAACu0zu1SmKd_PmfDkjzDg4ajhQ6A"></div>
-            <input type="submit" value="Wyślij">
-        </form>
-    </script>
-    <script src="./script.js"></script>
 </div>
+<footer class="footer site-footer" id="footer">
+    <div class="container">
+        <p>{{footer}}</p>
+    </div>
+</footer>
+<script type="text/html" id="gallery-template">
+    <section class="gallery">
+        <ul>
+            <li>
+                <figure>
+                    <img src="http://thecatapi.com/api/images/get.php?id=98o">
+                    <figcaption>
+                        <h2>Kot numer #1</h2>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="http://thecatapi.com/api/images/get.php?id=7nt">
+                    <figcaption>
+                        <h2>Kot numer #2</h2>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="http://thecatapi.com/api/images/get.php?id=9o6">
+                    <figcaption>
+                        <h2>Kot numer #3</h2>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="http://thecatapi.com/api/images/get.php?id=b9o">
+                    <figcaption>
+                        <h2>Kot numer #4</h2>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="http://thecatapi.com/api/images/get.php?id=70q">
+                    <figcaption>
+                        <h2>Kot numer #5</h2>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="http://thecatapi.com/api/images/get.php?id=asa">
+                    <figcaption>
+                        <h2>Kot numer #6</h2>
+                    </figcaption>
+                </figure>
+            </li>
+        </ul>
+    </section>
+</script>
+<script type="text/html" id="form-template">
+    <form method="POST" action="http://httpbin.org/post">
+        <div>
+            <label for="form-name">Imie</label>
+            <input aria-required="true" id="form-name" name="name" type="text" required>
+        </div>
+        <div>
+            <label for="form-email">Email</label>
+            <input aria-required="true" id="form-email" name="email" type="email" required>
+        </div>
+        <div>
+            <label for="form-content">Treść</label>
+            <textarea id="form-content" aria-required="true" name="content" required></textarea>
+        </div>
+        <div class="g-recaptcha" data-sitekey="6LfZ9gYTAAAAACu0zu1SmKd_PmfDkjzDg4ajhQ6A"></div>
+        <input type="submit" value="Wyślij">
+    </form>
+</script>
+<script src="./script.js"></script>
 </body>
 </html>
