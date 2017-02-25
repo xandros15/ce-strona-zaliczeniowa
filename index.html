@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Firma Lork</title>
+</head>
+<body>
+<div class="wrapper">
+    <header class="header site-header">
+        <h1>Strona firmy Lork</h1>
+        <div class="logo">
+            <a href="/">
+                <img alt="logo" src="{{logo}}">
+            </a>
+        </div>
+    </header>
+    <main class="main">
+        <section class="content">
+            <article class="">
+                <header class="entry-header">
+                    <h1>
+                        {{entry title}}
+                    </h1>
+                </header>
+                <section class="entry-content">
+                    {{entry content}}
+                </section>
+                <footer class="entry-footer">
+                    <address class="author">By <a rel="author" href="#">{{author}}</a></address> on<time datetime="{{time}}">{{time}}</time>
+                </footer>
+            </article>
+        </section>
+    </main>
+    <aside class="aside site-aside">
+        <nav class="main-nav">
+            <ul class="nav">
+                <li><a href="#">{{page}}</a></li>
+                <li><a href="#">{{page}}</a></li>
+                <li><a href="#">{{page}}</a></li>
+                <li><a href="#">{{page}}</a></li>
+            </ul>
+        </nav>
+    </aside>
+</div>
+<footer class="footer site-footer">
+    <p>{{footer}}</p>
+</footer>
+</body>
+</html>
