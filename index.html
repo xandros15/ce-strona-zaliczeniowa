@@ -18,7 +18,7 @@
         </div>
     </div>
 </header>
-<div class="wrapper">
+<div class="wrapper container">
     <aside class="aside site-aside">
         <nav class="main-nav" id="nav">
             <ul class="nav">
@@ -48,6 +48,7 @@
             </article>
         </section>
     </main>
+</div>
 </div>
 <footer class="footer site-footer" id="footer">
     <div class="container">
@@ -110,15 +111,15 @@
 </script>
 <script type="text/html" id="form-template">
     <form method="POST" action="http://httpbin.org/post">
-        <div>
+        <div class="field">
             <label for="form-name">Imie</label>
             <input aria-required="true" id="form-name" name="name" type="text" required>
         </div>
-        <div>
+        <div class="field">
             <label for="form-email">Email</label>
             <input aria-required="true" id="form-email" name="email" type="email" required>
         </div>
-        <div>
+        <div class="field">
             <label for="form-content">Treść</label>
             <textarea id="form-content" aria-required="true" name="content" required></textarea>
         </div>

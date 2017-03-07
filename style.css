@@ -6,37 +6,54 @@ body {
 body, html {
     margin: 0;
     padding: 0;
-    display: block;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.container-fluid,
+.container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container-fluid {
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.aside, .main {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.aside {
+    flex-basis: 41.66666667%;
+    max-width: 41.66666667%;
+}
+
+.main {
+    flex-basis: 58.33333333%;
+    max-width: 58.33333333%;
 }
 
 .wrapper {
     display: flex;
-    flex-wrap: wrap;
-}
-
-.aside {
-    width: 100%;
-}
-.main {
-    width: 100%;
-}
-
-@media all and (min-width: 768px) {
-    .aside {
-        width: 180px;
-    }
-    .main {
-        width: calc(100% - 180px);
-    }
+    flex: 1 0 auto;
 }
 
 .header .container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .logo img {
-    max-width: 124px;
+    width: 8rem;
 }
 
 .gallery ul, .gallery li {
@@ -54,26 +71,102 @@ body, html {
     width: calc(100% / 1);
 }
 
-@media all and (min-width: 768px) {
+.gallery img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    min-width: 49rem;
+}
+
+@media only screen and (min-width: 48em) {
+    .gallery li {
+        width: calc(100% / 1);
+    }
+}
+
+@media only screen and (min-width: 64em) {
+    .container {
+        width: 65rem;
+    }
+
     .gallery li {
         width: calc(100% / 2);
     }
 }
 
-@media all and (min-width: 1024px) {
+@media only screen and (min-width: 75em) {
+    .container {
+        width: 76rem;
+    }
+
     .gallery li {
         width: calc(100% / 3);
     }
-
 }
 
-@media all and (min-width: 1280px) {
-    .gallery li {
-        width: calc(100% / 4);
-    }
+.entry-content {
+    padding: .5rem;
 }
 
-.gallery img {
-    max-width: 100%;
-    height: auto;
+address {
+    display: inline-block;
+}
+
+form {
+    flex-basis: 40rem;
+    width: 40rem;
+}
+
+.field {
+    display: flex;
+    min-height: 2rem;
+    padding: .5rem;
+}
+
+.field label {
+    flex-basis: 5rem;
+    width: 5rem;
+}
+
+.field input, .field textarea {
+    box-sizing: border-box;
+    width: 25rem;
+    flex-basis: 25rem;
+}
+
+.field textarea {
+    height: 10rem;
+}
+
+input[type='submit'] {
+    margin: .5rem 0;
+    display: inline-block;
+    font-weight: normal;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid #8d8d8d;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: all 0.2s ease-in-out;
+    color: #333;
+    background-color: #fff;
+}
+
+input[type='submit']:focus, input[type='submit']:hover {
+    text-decoration: none;
+    outline: 0;
+}
+
+input[type='submit']:focus {
+    color: #fff;
+    background-color: #333;
+}
+
+input[type='submit']:active {
+    background-image: none;
 }
