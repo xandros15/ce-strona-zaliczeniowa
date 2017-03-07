@@ -130,6 +130,10 @@ form {
     width: 5rem;
 }
 
+.field label:after {
+    content: '\003A'
+}
+
 .field input, .field textarea {
     box-sizing: border-box;
     width: 25rem;
